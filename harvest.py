@@ -95,11 +95,12 @@ def make_melon_types():
 def print_pairing_info(melon_types):
     """Prints information about each melon type's pairings."""
 
-    print(f"{name} pairs with")
-
-    #loop through pairing list
-    for item in self.pairings:
-        print(f"- {item}")
+    for melon in melon_types:
+        print(f"{melon.name} pairs with:")
+        for item in melon.pairings:
+            print(f"- {item}")
+        if melon != melon_types[-1]:
+            print()
 
     
 
